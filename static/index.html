@@ -5,9 +5,13 @@
     <script src="jquery-2.2.0.min.js"></script>
     <script src="angular.min.1.5.x.js"></script>
     <script src="controller.js"></script>
+    <script src="service.js"></script>
   </head>
   <body ng-app="myApp">
-    <div ng-controller="SampleCtrl">hello {{name}} world. Let's see</div>
-    hey
+    <div ng-controller="SampleCtrl">
+      <input type="text" ng-model="searchText" placeholder="Keywords">
+      <button ng-click="getRestaurants()">Search</button>
+      <div>{{results}}</div>
+    </div>
   </body>
 </html>
