@@ -1,0 +1,29 @@
+{
+  "name": "invisibili-personal-website",
+  "version": "0.0.1",
+  "description": "A Node.js app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "~4.9.x",
+    "express-params": "0.0.3",
+    "socket.io": "~1.2.0",
+    "request": "~2.x.0",
+    "querystring": "~0.2.0"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/breeze1990/radarChart.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}
