@@ -13,8 +13,12 @@ myApp.controller('SampleCtrl', ['$scope', 'service', function ($scope, service) 
     return searchText.split(' ');
   }
 
+
+  /// ---- For temporary usage -----
   $scope.showImage = true;
   $scope.flipImage = function () {
     $scope.showImage = !$scope.showImage;
   }
+  $scope.elapsedTime = service.calculateElapsedTime();
+
 }]);

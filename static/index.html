@@ -4,18 +4,32 @@
     <meta charset="utf-8">
     <script src="jquery-2.2.0.min.js"></script>
     <script src="angular.min.1.5.x.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.1.0/moment.min.js"></script>
     <script src="controller.js"></script>
     <script src="service.js"></script>
   </head>
 
-  <body ng-app="myApp">
-    <div ng-controller="SampleCtrl">
-      <div ng-click="flipImage()" style="width:530px; height:703px;">
-      <img src="one.jpg"
-           ng-if="showImage"
-           alt="Happy Valentine's Day"
-           style="width:530px;height:703px;"/>
-      <h2 ng-if="!showImage" style="color: red;"> Happy Valentine's Day</h2>
+  <body ng-app="myApp" style="background-color:pink;">
+    <div ng-controller="SampleCtrl" style="display: flex;">
+      <div style="flex: 1;">
+        <div ng-click="flipImage()" style="width:530px; height:703px;">
+        <img src="one.jpg"
+             ng-if="showImage"
+             alt="Happy Valentine's Day"
+             style="width:530px;height:703px;"/>
+        <div ng-if="!showImage" style="color: red; padding-top:300px; padding-left:200px;">
+          <h1>SURPRISE!!!</h1>
+        </div>
+        </div>
+      </div>
+      <div ng-if="elapsedTime.showTime" style="flex: 1; color: red;">
+        <img src="two.jpg" alt="Happy Valentine's Day" style="width:512px; height:384px;">
+        <div style="padding-left:50px; padding-top: 50px;">
+          <h1>Baby, we've been together for: </h1>
+          <h1 style="padding-left:100px;">
+            {{elapsedTime.years}}y {{elapsedTime.days}}d {{elapsedTime.hours}}h {{elapsedTime.minutes}}m {{elapsedTime.seconds}}s
+          </h1>
+        </div>
       </div>
     </div>
   </body>
