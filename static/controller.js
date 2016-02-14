@@ -12,4 +12,9 @@ myApp.controller('SampleCtrl', ['$scope', 'service', function ($scope, service) 
   function _translateSearchTextToKeywords(searchText) {
     return searchText.split(' ');
   }
+
+  $scope.showImage = true;
+  $scope.flipImage = function () {
+    $scope.showImage = !$scope.showImage;
+  }
 }]);
